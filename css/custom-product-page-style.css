@@ -1,0 +1,26 @@
+/* Adding button */
+.yith-wcwl-add-button {
+  border: 2px solid #ed6b28;
+  margin-right: 30%;
+  padding: 0.375em 0 0.375em 0;
+  border-radius: 50px;
+  background: #f7f7f9;
+  text-align: center;
+}
+
+/* Product already in wishlist feedback */
+.yith-wcwl-wishlistexistsbrowse > .feedback {
+  font-weight: 600;
+  font-size: 0.75em;
+  line-height: 1.2em;
+  letter-spacing: 0.2em;
+}
+
+/* Open wishlist feedback */
+.yith-wcwl-wishlistexistsbrowse > a {
+  color: #ed6b28 !important;
+  font-weight: 600 !important;
+  font-size: 0.75em !important;
+  line-height: 1.2em !important;
+  letter-spacing: 0.2em !important;
+}
