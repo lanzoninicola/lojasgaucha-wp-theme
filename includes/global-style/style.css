@@ -3,9 +3,9 @@
   margin-bottom: 0px;
 }
 
-input,
+input:not(input[type="submit"]),
 textarea {
-  border: 2px #ed6b28 solid;
+  border: 2px #ed6b28 solid !important;
   border-top: none !important;
   border-right: none !important;
   border-left: none !important;

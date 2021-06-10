@@ -1,6 +1,6 @@
 <?php
 //* https://stackoverflow.com/questions/53288621/is-there-a-shortcode-for-product-description-in-woocommerce
-function custom_product_description($atts){
+function woo_product_description($atts){
     global $product;
 
     try {
@@ -13,4 +13,4 @@ function custom_product_description($atts){
         return "Product description shortcode encountered an exception";
     }
 }
-add_shortcode( 'custom_product_description', 'custom_product_description' );
+add_shortcode( 'woo_product_description', 'woo_product_description' );

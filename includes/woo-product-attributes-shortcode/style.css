@@ -1,0 +1,17 @@
+.woo-product-attribute {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 2em;
+}
+
+.woo-product-attribute-name {
+  font-weight: 600;
+  font-size: 1em;
+  line-height: 1em;
+}
+
+.woo-product-attribute-divider {
+  border-top: 1px solid #dedede;
+}

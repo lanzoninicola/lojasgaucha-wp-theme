@@ -14,16 +14,18 @@ function enqueue_parent_theme_style()
 // }
 
 
-require_once(__DIR__ . '/includes/custom-global-style.php');
 
-require_once(__DIR__ . '/includes/custom-product-description-shortcode.php');
+// require_once(__DIR__ . '/includes/disable-woocommerce-scripts.php');
 
-require_once(__DIR__ . '/includes/custom-product-page-style.php');
+require_once(__DIR__ . '/includes/global-style/index.php');
 
-// $isproduct = is_product();
-// echo $isproduct ? "true" : "false";
-// echo is_a($product, 'WC_Product') ? "true" : "false";
+require_once(__DIR__ . '/includes/woo-product-description-shortcode/index.php');
 
-// if (is_a($product, 'WC_Product')) {
-//     require_once(__DIR__ . '/includes/custom-product-page-style.php');
-// }
+require_once(__DIR__ . '/includes/woo-product-attributes-shortcode/index.php');
+
+require_once(__DIR__ . '/includes/woo-product-related-shortcode/index.php');
+
+require_once(__DIR__ . '/includes/woo-product-page-wishlist/index.php');
+
+require_once(__DIR__ . '/includes/woo-product-reviews/index.php');
+

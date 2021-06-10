@@ -7,20 +7,31 @@
   background: #f7f7f9;
   text-align: center;
 }
+.yith-wcwl-wishlistexistsbrowse,
+.yith-wcwl-wishlistaddedbrowse {
+  white-space: pre-line;
+}
 
 /* Product already in wishlist feedback */
-.yith-wcwl-wishlistexistsbrowse > .feedback {
+.yith-wcwl-wishlistexistsbrowse,
+.yith-wcwl-wishlistaddedbrowse {
   font-weight: 600;
   font-size: 0.75em;
-  line-height: 1.2em;
+  line-height: 0.75em;
   letter-spacing: 0.2em;
 }
 
 /* Open wishlist feedback */
-.yith-wcwl-wishlistexistsbrowse > a {
-  color: #ed6b28 !important;
+.yith-wcwl-wishlistexistsbrowse a,
+.yith-wcwl-wishlistaddedbrowse a {
   font-weight: 600 !important;
-  font-size: 0.75em !important;
+  font-size: 1em !important;
   line-height: 1.2em !important;
-  letter-spacing: 0.2em !important;
+  color: #ed6b28 !important;
+}
+
+@media (max-width: 375px) {
+  .yith-wcwl-add-button {
+    margin-right: 0%;
+  }
 }
