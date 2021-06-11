@@ -20,7 +20,7 @@ require_once(__DIR__ . '/includes/woo-product-related-shortcode/index.php');
 
 require_once(__DIR__ . '/includes/woo-product-page-wishlist/index.php');
 
-require_once(__DIR__ . '/includes/woo-product-reviews/index.php');
+require_once(__DIR__ . '/includes/woo-product-page-comments/index.php');
 
 require_once(__DIR__ . '/includes/back-to-the-top/index.php');
 
