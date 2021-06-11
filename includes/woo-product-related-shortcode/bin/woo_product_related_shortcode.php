@@ -34,9 +34,9 @@ function wc_custom_product_related($atts)
 			'orderby'        => 'rand', // @codingStandardsIgnoreLine.
 		);
 
-		$foo = woocommerce_related_products( apply_filters( 'woocommerce_output_related_products_args', $args ) );
+		// $foo = woocommerce_related_products( apply_filters( 'woocommerce_output_related_products_args', $args ) );
 
-        echo $foo;
+        // echo $foo;
     }
 
     $output .= '</div>';

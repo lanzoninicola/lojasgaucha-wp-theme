@@ -23,6 +23,8 @@ function woo_product_attributes_shortcode($atts)
     // Start output
     $output = '<div class="woo-product-attributes-container">';
 
+ 
+
     if (is_a($product, 'WC_Product')) {
         $attributes = array_filter($product->get_attributes(), 'wc_attributes_array_filter_visible');
 
