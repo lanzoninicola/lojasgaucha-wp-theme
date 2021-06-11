@@ -1,5 +1,7 @@
 <?php
 
+//TODO: draft
+
 if (!function_exists('enqueue_woo_product_modal')) {
     function enqueue_woo_product_modal()
     {

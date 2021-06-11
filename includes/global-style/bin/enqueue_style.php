@@ -1,21 +1,29 @@
 <?php
-add_action('wp_enqueue_global_style', 'enqueue_global_style');
+define('MODULE_NAME', 'global-style');
+
+add_action('init', 'register_global_style');
+
+if (!function_exists('register_global_style')) {
+    function register_global_style()
+    {
+        wp_register_style(
+            MODULE_NAME,
+            get_stylesheet_directory_uri() . '/includes/'. MODULE_NAME . '/style.css',
+            [],
+            null
+        );
+    }
+}
+
+
+add_action('wp_enqueue_scripts', 'enqueue_global_style');
 
 if (!function_exists('enqueue_global_style')) {
     function enqueue_global_style()
     {
-        $module_name = 'global-style';
-        $path = '/includes/' . $module_name . '/style.css';
-        $version = wp_get_theme()->get('Version');
-
+        
         if (!is_admin()) {
-            wp_enqueue_style(
-                $module_name,
-                get_stylesheet_directory_uri() . $path,
-                array(),
-                $version,
-            );
+            wp_enqueue_style(MODULE_NAME);
         }
     }
-    do_action('wp_enqueue_global_style');
 }
