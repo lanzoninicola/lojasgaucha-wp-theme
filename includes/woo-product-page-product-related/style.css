@@ -1,0 +1,19 @@
+.woocommerce .related li.product img.attachment-woocommerce_thumbnail {
+  border-radius: 50px;
+  opacity: 0.9;
+}
+
+.woocommerce .related li.product img.attachment-woocommerce_thumbnail::before {
+  background: red;
+}
+
+.woocommerce .related li.product img.attachment-woocommerce_thumbnail:hover {
+  border-radius: 10px;
+  opacity: 1;
+  transform: scale(1.1);
+  content: "VEJA PRODUTO";
+}
+
+.woocommerce .related li.product a.button {
+  display: none;
+}

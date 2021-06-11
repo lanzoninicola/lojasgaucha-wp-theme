@@ -1,0 +1,8 @@
+.modal-container {
+  /* position: absolute; */
+  top: 0px;
+  right: 20px;
+  background: red;
+  height: 200px;
+  width: 300px;
+}
