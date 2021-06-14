@@ -12,6 +12,10 @@ function enqueue_parent_theme_style()
 
 require_once(__DIR__ . '/includes/global-style/index.php');
 
+require_once(__DIR__ . '/includes/nav-menu/index.php');
+
+require_once(__DIR__ . '/includes/header-search-form/index.php');
+
 require_once(__DIR__ . '/includes/woo-product-description-shortcode/index.php');
 
 require_once(__DIR__ . '/includes/woo-product-attributes-shortcode/index.php');

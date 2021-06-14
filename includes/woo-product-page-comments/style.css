@@ -58,7 +58,7 @@
   font-size: 1em !important;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 414px) {
   .woocommerce-Reviews {
     grid-gap: 2em;
   }

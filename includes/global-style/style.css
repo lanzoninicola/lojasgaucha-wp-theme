@@ -3,7 +3,7 @@
   margin-bottom: 0px;
 }
 
-input:not(input[type="submit"]),
+input:not(input[type="submit"]):not(input[type="search"]),
 textarea {
   border: 2px #ed6b28 solid !important;
   border-top: none !important;

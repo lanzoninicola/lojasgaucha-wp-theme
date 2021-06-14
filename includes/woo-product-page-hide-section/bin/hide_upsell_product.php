@@ -1,5 +1,5 @@
 <?php
-// require_once(FULL_SITE_NAME . '/wp-content/themes/hello-elementor-child/includes/utils/add_script_attribute.php');
+// require_once(FULL_SITE_URL . '/wp-content/themes/hello-elementor-child/includes/utils/add_script_attribute.php');
 
 define('WC_P_HIDE_SECTION_MODULE_NAME', 'woo-product-page-hide-section');
 define('WC_P_HIDE_SECTION_MODULE_PATH', get_stylesheet_directory_uri() . '/includes/' . WC_P_HIDE_SECTION_MODULE_NAME . '/bin/hide_upsell_product.js');

@@ -1,0 +1,73 @@
+.elementor-nav-menu--main a {
+  padding: 0.7em 0.5em 0.5em 0.7em !important;
+}
+
+.nav-menu-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 8.5em;
+  white-space: normal !important;
+}
+
+.nav-menu-icon {
+  height: 2em;
+  width: 2.8em;
+  padding-right: 1em;
+}
+
+#fala-conosco-icon {
+  background: url("../img/menu-fala-conosco-icon.svg");
+  background-repeat: no-repeat;
+}
+
+#fala-conosco-icon:hover {
+  background: url("../img/menu-fala-conosco-icon-orange.svg");
+  background-repeat: no-repeat;
+}
+
+#lista-desejos-icon {
+  background: url("../img/menu-lista-desejos-icon.svg");
+  background-repeat: no-repeat;
+}
+
+#lista-desejos-icon:hover {
+  background: url("../img/menu-lista-desejos-icon-orange.svg");
+  background-repeat: no-repeat;
+}
+
+#minha-conta-icon {
+  background: url("../img/menu-minha-conta-icon.svg");
+  background-repeat: no-repeat;
+}
+
+#minha-conta-icon:hover {
+  background: url("../img/menu-minha-conta-icon-orange.svg");
+  background-repeat: no-repeat;
+}
+
+#carrinho-icon {
+  background: url("../img/menu-carrinho-icon.svg");
+  background-repeat: no-repeat;
+}
+
+#carrinho-icon:hover {
+  background: url("../img/menu-carrinho-icon-orange.svg");
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 414px) {
+  /* .elementor-nav-menu--layout-horizontal  */
+  .elementor-nav-menu {
+    flex-direction: row;
+    flex-wrap: nowrap !important;
+    max-width: 100vw;
+  }
+
+  .elementor-nav-menu .elementor-item {
+    width: 50px;
+    max-width: 50px;
+    padding: -1.5em;
+  }
+}
