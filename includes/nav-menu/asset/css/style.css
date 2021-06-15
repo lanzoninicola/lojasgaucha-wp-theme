@@ -20,54 +20,65 @@
 #fala-conosco-icon {
   background: url("../img/menu-fala-conosco-icon.svg");
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 #fala-conosco-icon:hover {
   background: url("../img/menu-fala-conosco-icon-orange.svg");
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 #lista-desejos-icon {
   background: url("../img/menu-lista-desejos-icon.svg");
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 #lista-desejos-icon:hover {
   background: url("../img/menu-lista-desejos-icon-orange.svg");
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 #minha-conta-icon {
   background: url("../img/menu-minha-conta-icon.svg");
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 #minha-conta-icon:hover {
   background: url("../img/menu-minha-conta-icon-orange.svg");
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 #carrinho-icon {
   background: url("../img/menu-carrinho-icon.svg");
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 #carrinho-icon:hover {
   background: url("../img/menu-carrinho-icon-orange.svg");
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 @media (max-width: 414px) {
-  /* .elementor-nav-menu--layout-horizontal  */
-  .elementor-nav-menu {
+  /* .elementor-nav-menu {
     flex-direction: row;
     flex-wrap: nowrap !important;
     max-width: 100vw;
-  }
+  } */
 
-  .elementor-nav-menu .elementor-item {
-    width: 50px;
-    max-width: 50px;
-    padding: -1.5em;
+  /* .elementor-nav-menu .elementor-item { */
+  /* width: 50px;
+    max-width: 50px; */
+  /* padding: -1.5em;
+  } */
+
+  .nav-menu-item {
+    width: 2em;
   }
 }
