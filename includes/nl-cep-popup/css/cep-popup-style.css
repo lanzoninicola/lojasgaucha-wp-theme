@@ -1,12 +1,8 @@
-.nl-cep-form-hidden {
-  display: none;
+.cep-popup-hidden {
+  display: none !important;
 }
 
-.nl-cep-form-show {
-  display: inherit;
-}
-
-.nl-cep-form-overlay {
+.cep-popup-overlay {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -15,14 +11,24 @@
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 2;
+  z-index: 999;
   cursor: pointer;
+}
+
+.cep-popup-flex-center {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-#cep-form-wrapper {
+#cep-popup-container h2,
+h3,
+p {
+  text-align: center;
+}
+
+#cep-popup-wrapper {
   height: 400px;
   width: 500px;
   background-color: white;
@@ -31,9 +37,56 @@
   padding: 1em;
 }
 
+#cep-popup-donotremindme {
+  font-size: 0.75em;
+  display: block;
+  margin-top: auto;
+}
+
+#cep-popup-donotremindme:hover {
+  text-decoration-line: underline;
+}
+
+#cep-popup-notice {
+  height: 15%;
+  padding: 1em;
+}
+
+#cep-form-container select {
+  margin-bottom: 0.75em;
+}
+
+#cep-form-container input {
+  margin-bottom: 0.75em;
+}
+
+#buscaCEP {
+  text-align: center;
+  text-decoration-line: underline;
+  font-size: 0.75em;
+  color: gray;
+}
+
+.cep-notice-error {
+  color: rgb(214, 57, 57);
+}
+
+.cep-notice-warning {
+  color: rgb(214, 114, 57);
+}
+
+.cep-notice-info {
+  color: rgb(85, 85, 85);
+}
+
 @media (max-width: 475px) {
-  .nl-cep-form-cep-form-wrapper {
-    height: 90%;
+  .cep-popup-button {
+    margin-bottom: 0.5em;
+    width: 100%;
+  }
+
+  #cep-popup-wrapper {
+    height: 60%;
     width: 90%;
   }
 }

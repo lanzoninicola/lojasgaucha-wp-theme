@@ -26,25 +26,9 @@ class CEP_Popup_Configs
         return self::get_plugin_root_path() . '/includes';
     }
 
-    public static function get_userstories_config()
-    {
-        return array(
-            "starting_point" => "start",
-            "ending_point" => "end"
-        );
+    public static function get_plugin_views_path(){
+        return self::get_plugin_root_path() . '/views';
     }
-
-    public static function first_userstory_name()
-    {
-        return self::get_userstories_config()["starting_point"];
-    }
-
-
-    public static function last_userstory_name()
-    {
-        return self::get_userstories_config()["ending_point"];
-    }
-
 
     public static function get_wp_ajax_endpoint()
     {

@@ -2,37 +2,6 @@
 
 // TODO: manage WP NONCE in AJAX CALL
 
-function check_cep_request()
-{
-    // $requestFrom = $_POST["request_id"];
-
-    // if ($requestFrom === "cep-popup") {
-
-
-    //     $result = array(
-            
-    //     );
-
-
-
-    do_action('adding_cep_popup', $cep_popup, true);
-    wp_redirect( "http://localhost/lojasgaucha/?" );
-exit;
-    wp_send_json_success("urra");
-    // }
-
-    
-
-    die();
-}
-
-add_action('wp_ajax_check_cep_request', 'check_cep_request'); // wp_ajax_{ACTION HERE}
-add_action('wp_ajax_nopriv_check_cep_request', 'check_cep_request');
-
-
-
-
-
 function shipping_area_validation()
 {
     $requestFrom = $_POST["request_id"];

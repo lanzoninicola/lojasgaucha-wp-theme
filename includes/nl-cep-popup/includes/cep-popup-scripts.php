@@ -4,9 +4,10 @@
 if (!function_exists('nl_cep_popup_register_scripts')) {
     function nl_cep_popup_register_scripts()
     {
-        $ajax_endpoint = CEP_Popup_Configs::get_wp_ajax_endpoint();
+        $wp_ajax_endpoint = CEP_Popup_Configs::get_wp_ajax_endpoint();
         $default_country_code = CEP_Popup_Configs::DEFAULT_COUNTRY_CODE;
         $default_state_code = CEP_Popup_Configs::DEFAULT_STATE_CODE;
+        $show_popup_timeout = CEP_Popup_Configs::SHOW_POPUP_TIMEOUT;
 
         // TODO: think if require to register first and register only is_home() 
         wp_register_script(
@@ -18,9 +19,11 @@ if (!function_exists('nl_cep_popup_register_scripts')) {
         );
 
         wp_localize_script('script-nl-cep-popup', 'jsDataLake', array(
-            "adminAjax" => $ajax_endpoint,
+            "popupTimeout" => $show_popup_timeout,
+            "wpAjaxEndpoint" => $wp_ajax_endpoint,
             "countryCode" => $default_country_code,
             "stateCode" => $default_state_code,
+            "homeURL" => home_url(),
         ));
 
         wp_enqueue_script(

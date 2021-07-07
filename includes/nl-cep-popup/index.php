@@ -1,102 +1,51 @@
 <?php
+// TODO: ask for email when the user shipping-zone is available
+// TODO: create check to cep shortcode to add to site (option adding class for styling)
+
+// TODO: cep-popup-main.js - manage response from server
+// TODO: cep-popup-main.js - managing errors (send to external services)
 
 require __DIR__ . '/lib/class-cep-popup-configs.php';
 $plugin_lib_path = CEP_Popup_Configs::get_plugin_lib_path();
 $plugin_includes_path = CEP_Popup_Configs::get_plugin_includes_path();
 
-require $plugin_lib_path . '/class-cep-popup.php';
-require $plugin_lib_path . '/class-cep-popup-userstory.php';
-
 require $plugin_includes_path . '/cep-popup-styles.php';
 require $plugin_includes_path . '/cep-popup-scripts.php';
 
-require $plugin_lib_path . '/cep-popup-userstories-data.php';
-
-
-$cep_popup = new CEP_Popup([
-    "user_stories_data" => $user_stories_data,
-    "configs" => array(
-        "first_userstory_name" => CEP_Popup_Configs::first_userstory_name(),
-        "last_userstory_name" => CEP_Popup_Configs::last_userstory_name(),
-    )
-]);
 
 /* ------------------------------------------
 // Print out PopUp Content -----------------
 --------------------------------------------- */
-function nl_cep_popup_print_content($cep_popup, $next_action = false)
+function nl_cep_popup_print_content()
 {
 
-    $plugin_lib_path = CEP_Popup_Configs::get_plugin_lib_path();
-    require $plugin_lib_path . '/cep-popup-userstories-data.php';
-
-
-    $cep_popup = new CEP_Popup([
-        "user_stories_data" => $user_stories_data,
-        "configs" => array(
-            "first_userstory_name" => CEP_Popup_Configs::first_userstory_name(),
-            "last_userstory_name" => CEP_Popup_Configs::last_userstory_name(),
-        )
-    ]);
-
+    if (is_front_page() or is_shop()) :
 ?>
-    <div id="cep-form-container" class="nl-cep-form-hidden nl-cep-form-overlay">
-        <div id="cep-form-wrapper">
 
-            <?php
+        <div id="cep-popup-container" class="cep-popup-overlay cep-popup-flex-center cep-popup-hidden ">
+            <div id="cep-popup-wrapper" class="cep-popup-flex-center">
 
-            try {
+                <?php
+                $plugin_views_path = CEP_Popup_Configs::get_plugin_views_path();
 
-                if(!$next_action) {
-                    $cep_popup->show_content();
-                } else {
-                    $cep_popup->next_content();
-                }
-                
-            } catch (\Throwable $th) {
-                //throw $th;
-                // TODO: redirect to home page or send request
-            }
+                include $plugin_views_path . '/view-cep-popup-welcome.php';
+                include $plugin_views_path . '/view-cep-popup-check-cep.php';
+                include $plugin_views_path . '/view-cep-popup-check-cep-success.php';
+                include $plugin_views_path . '/view-cep-popup-check-cep-failed.php';
+                ?>
+                <div id="cep-popup-notice">NOTICE NOTICE NOTICE</div>
+                <?php
+                include $plugin_views_path . '/components/link-donot-remind-me.php';
+                ?>
 
-            ?>
+            </div>
 
         </div>
-        <div id="cep-form-notice"></div>
-    </div>
+
 <?php
+    endif;
 }
 
-add_action('adding_cep_popup', 'nl_cep_popup_print_content', 100, 2);
+add_action('wp_head', 'nl_cep_popup_print_content', 100, 2);
 
-
-function boo() {
-    $plugin_lib_path = CEP_Popup_Configs::get_plugin_lib_path();
-    require $plugin_lib_path . '/cep-popup-userstories-data.php';
-
-    $cep_popup = new CEP_Popup([
-        "user_stories_data" => $user_stories_data,
-        "configs" => array(
-            "first_userstory_name" => CEP_Popup_Configs::first_userstory_name(),
-            "last_userstory_name" => CEP_Popup_Configs::last_userstory_name(),
-        )
-    ]);
-
-
-    do_action('adding_cep_popup', $cep_popup);
-}
-
-add_action("wp_head", "boo", 100);
-
-
-function foo(){
-  
-    remove_action("adding_cep_popup", "nl_cep_popup_print_content");
-
-
-}
-
-add_action('foo', 'foo', 100);
-
-
-include $plugin_includes_path . "/cep-popup-scripts-bootstrap.php";
 include $plugin_lib_path . "/cep-popup-ajax-calls-handler.php";
