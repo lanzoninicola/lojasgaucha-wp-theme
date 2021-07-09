@@ -7,11 +7,9 @@
 
 require __DIR__ . '/lib/class-cep-popup-configs.php';
 $plugin_lib_path = CEP_Popup_Configs::get_plugin_lib_path();
-$plugin_includes_path = CEP_Popup_Configs::get_plugin_includes_path();
 
-require $plugin_includes_path . '/cep-popup-styles.php';
-require $plugin_includes_path . '/cep-popup-scripts.php';
-
+require $plugin_lib_path . '/cep-popup-styles.php';
+require $plugin_lib_path . '/cep-popup-scripts.php';
 
 /* ------------------------------------------
 // Print out PopUp Content -----------------
@@ -33,11 +31,8 @@ function nl_cep_popup_print_content()
                 include $plugin_views_path . '/view-cep-popup-check-cep-success.php';
                 include $plugin_views_path . '/view-cep-popup-check-cep-failed.php';
                 ?>
-                <div id="cep-popup-notice">NOTICE NOTICE NOTICE</div>
-                <?php
-                include $plugin_views_path . '/components/link-donot-remind-me.php';
-                ?>
-
+                <div id="cep-popup-notice"></div>
+                <div id="cep-popup-donotremindme">Não me lembre</div>
             </div>
 
         </div>

@@ -59,7 +59,8 @@ function gotoCepCheck() {
   const viewCepCheckForm = cepPopupDomNodes["viewCepCheckForm"];
   if (viewWelcome) {
     if (btnGotoCepCheckForm) {
-      btnGotoCepCheckForm.addEventListener("click", (_) => {
+      btnGotoCepCheckForm.addEventListener("click", (e) => {
+        e.preventDefault();
         hideNode(viewWelcome);
         showNode(viewCepCheckForm);
       });
@@ -75,6 +76,7 @@ function submitCepCheckRequest() {
 
   if (btnSubmitCheckCep) {
     btnSubmitCheckCep.addEventListener("click", (e) => {
+      e.preventDefault();
       if (cepUserInput.value <= 0) {
         setNotice({ type: "error", message: "CEP necessário" });
       } else {
@@ -134,7 +136,10 @@ function gotoStore() {
 
   if (btnGotoStore.length > 0) {
     Object.keys(btnGotoStore).forEach((i) => {
-      btnGotoStore[i].addEventListener("click", () => hideNode(containerNode));
+      btnGotoStore[i].addEventListener("click", () => {
+        e.preventDefault();
+        hideNode(containerNode);
+      });
     });
   }
 }
@@ -186,7 +191,8 @@ function doNotRemindMe() {
   const containerNode = cepPopupDomNodes["containerNode"];
 
   if (doNotRemindMe) {
-    doNotRemindMe.addEventListener("click", (_) => {
+    doNotRemindMe.addEventListener("click", (e) => {
+      e.preventDefault();
       hideNode(containerNode);
       setCookie("cepDoNotRemindMe", "yes", 30);
     });

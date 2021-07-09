@@ -1,1 +1,0 @@
-<button class="cep-popup-button cep-popup-btn-go-to-store"></button>

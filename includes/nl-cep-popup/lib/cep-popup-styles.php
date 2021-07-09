@@ -2,6 +2,7 @@
 
 // TODO: set brand colors to wrapper form (background, text etc...)
 // TODO: set brand font to wrapper form
+// TODO: manage css versioning
 
 /* ------------------------------------------
 // Enqueue JS & CSS -------------------------------

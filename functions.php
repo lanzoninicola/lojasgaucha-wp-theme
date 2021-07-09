@@ -9,7 +9,10 @@ function enqueue_parent_theme_style()
 }
 
 
-require_once(__DIR__ . '/includes/nl-cep-popup/index.php');
+
+require_once(__DIR__ . '/includes/hzbi-archive-product/index.php');
+
+// require_once(__DIR__ . '/includes/nl-cep-popup/index.php');
 
 
 /*
