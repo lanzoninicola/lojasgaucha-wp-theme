@@ -3,8 +3,8 @@
 function ql_woocommerce_ajax_add_to_cart_js()
 {
     wp_enqueue_script(
-        'hzbi_add_to_cart',
-        get_stylesheet_directory_uri() . '/includes/hzbi-archive-product/js/ajax_add_to_cart.js',
+        'trww_add_to_cart',
+        get_stylesheet_directory_uri() . '/includes/trww-archive-product/js/ajax_add_to_cart.js',
         array('wc-add-to-cart'),
         '1.0',
         true
@@ -28,7 +28,7 @@ add_action( 'elementor/frontend/element/before_render', function ( \Elementor\El
 
 
 /**
-include get_stylesheet_directory() . '/includes/hzbi-archive-product/includes/class-browser_detector.php';
+include get_stylesheet_directory() . '/includes/trww-archive-product/includes/class-browser_detector.php';
 $browserDetector = new browserDetector();
 
 if ($browserDetector->isAndroid($browser) or $browserDetector->isIphone($browser)) {
@@ -59,7 +59,7 @@ if ($browserDetector->isAndroid($browser) or $browserDetector->isIphone($browser
         if ($product_categories_count > 0) {
             foreach ($product_categories as $product_category) {
 ?>
-                <div id="hzbi-category-card" data-category-id="<?php echo $product_category->id ?>">
+                <div id="trww-category-card" data-category-id="<?php echo $product_category->id ?>">
                     <a href="<?php echo get_term_link($product_category) ?> "><?php echo $product_category->name ?></a>
 
                     <?php
@@ -179,6 +179,6 @@ if ($browserDetector->isAndroid($browser) or $browserDetector->isIphone($browser
     });
 
 
-    include get_stylesheet_directory() . "/includes/hzbi-archive-product/lib/hzbi-ajax-calls-handler.php";
+    include get_stylesheet_directory() . "/includes/trww-archive-product/lib/trww-ajax-calls-handler.php";
 }
  */

@@ -7,7 +7,7 @@
 
 // Browser class
 // Thanks to: https://github.com/cbschuld/Browser.php
-require_once get_stylesheet_directory() . '/includes/hzbi-archive-product/includes/class-browser.php';
+require_once get_stylesheet_directory() . '/includes/trww-archive-product/includes/class-browser.php';
 
 
 // function isAndroid(object $browser)

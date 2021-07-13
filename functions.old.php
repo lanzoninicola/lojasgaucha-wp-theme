@@ -48,7 +48,7 @@ add_action('woocommerce_before_shop_loop', function () {
             // print_r($product_category->term_id)
 
 ?>
-            <div id="hzbi-category-card" data-category-id="<?php echo $product_category->term_id ?>">
+            <div id="trww-category-card" data-category-id="<?php echo $product_category->term_id ?>">
                 <a href="<?php echo get_term_link($product_category) ?> "><?php echo $product_category->name ?></a>
 
                 <?php
