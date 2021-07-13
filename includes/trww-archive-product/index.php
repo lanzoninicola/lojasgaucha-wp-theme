@@ -66,37 +66,50 @@ function trww_product_archive()
 
             $output .= "<div class='trww-category-card' data-category-id='$product_category->id'>";
 
-            
+
             // category inner start
             $output .= "<div class='trww-category-inner-card'>";
             // category thumbnail - start
             $product_category_thumbnail_id = get_term_meta($product_category->id, 'thumbnail_id', true);
             $product_category_thumbnail = wp_get_attachment_url($product_category_thumbnail_id);
-            $output .= "<div id='trww-category-inner-image'>
+            $output .= "<div class='trww-category-inner-image'>
                             <img src='" . $product_category_thumbnail . "' width='80px' alt loading='lazy' />
                         </div>";
             // category thumbnail - end
 
 
             // category content - start
-            $output .= "<div id='trww-category-content'>";
+            $output .= "<div class='trww-category-content'>";
 
-            $output .= "<div id='trww-category-name'>" . $product_category->name . "</div>";
+            $output .= "<div class='trww-category-name'>" . $product_category->name . "</div>";
 
-            // category custom fields - start
-            $output .= "<div id='trww-category-info'>";
+            // category info custom fields - start
+            $output .= "<div class='trww-category-info'>";
 
             $product_category_abv = get_term_meta($product_category->id, 'abv', true);
-            $output .= "<div id='trww-category-name'>" . $product_category_abv . "</div>";
+            if ($product_category_abv) {
+                $output .= "<div class='category-info-details'>";
+                $output .= "<div>ABV</div>";
+                $output .= "<div>" . $product_category_abv . "</div>";
+                $output .= "</div>";
+            }
 
             $product_category_ibu = get_term_meta($product_category->id, 'ibu', true);
-            $output .= "<div id='trww-category-name'>" . $product_category_ibu . "</div>";
+            if ($product_category_ibu) {
+                $output .= "<div class='category-info-details'>";
+                $output .= "<div>IBU</div>";
+                $output .= "<div>" . $product_category_ibu . "</div>";
+                $output .= "</div>";
+            }
+
             $output .= "</div>";
-            // category custom field - end
+            // category info custom field - end
+
+            $output .= "<div class='product-category-explode' data-category-id=" . $product_category->id . ">VEJA</div>";
 
             $output .= "</div>";
             // category content - end
-            
+
             $output .= "</div>";
             // category inner - end
 
@@ -142,7 +155,7 @@ function trww_product_archive()
 
                     if ($product_data && $product_is_valid) {
 
-                        $output .= "<li id='trww-product' class='trww-hidden'>";
+                        $output .= "<li class='trww-product trww-hidden'>";
 
                         // Product image
                         $product_url_image = "";
